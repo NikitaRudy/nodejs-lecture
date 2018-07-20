@@ -1,0 +1,14 @@
+/* #### CSS BUNDLER #### */
+
+/* module: /Users/mikita_rudy/sandbox/node-lecture/4-fs/bundler/src/1.css */
+#root {
+    margin: 0;
+}
+/* module: /Users/mikita_rudy/sandbox/node-lecture/4-fs/bundler/src/2.css */
+.root {
+    margin: 0;
+}
+/* module: /Users/mikita_rudy/sandbox/node-lecture/4-fs/bundler/src/3.css */
+div {
+    margin: 0;
+}
