@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const pathToFile = path.join(__dirname, 'bigfile.txt');
 const readable = fs.createReadStream(pathToFile, {
     highWaterMark: 64 * 1024
 });
