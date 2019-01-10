@@ -1,30 +1,15 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const router = require('./routes');
 
-const usersControllers = require('./controllers/users');
+const jsonBodyParser = require('./middlewares/jsonBodyParser');
 const { errorMiddleware } = require('./middlewares');
 
 const app = express();
 
-app.get('/api/users', (req, res) => {
-    usersControllers.getUsers()
-        .then(users => res.json(users))
-        .catch(err => {
-            res.status(404);
-            res.end('not found');
-        })
-});
-
-app.get('/api/users/:id', (req, res) => {
-    usersControllers.getUser(req.params.id)
-        .then(user => res.json(user))
-        .catch(err => {
-            res.status(404);
-            res.end('not found');
-        });
-});
-
+app.use(jsonBodyParser);
+app.use(router);
 app.use(errorMiddleware);
 
 app.listen(8080, () => console.log('listening...'));
