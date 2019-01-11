@@ -15,7 +15,7 @@ function getCities() {
 
 function getCity(id) {
     return getCities()
-        .then(cities => cities.find(city => city.id === id))
+        .then(cities => cities.find(city => city.id === +id))
 }
 
 function saveCities(cities) {

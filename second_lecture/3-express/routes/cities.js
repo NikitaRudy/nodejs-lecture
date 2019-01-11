@@ -4,7 +4,7 @@ const authenticate = require('../middlewares/authenticate');
 
 const router = express.Router();
 
-router.get('/', authenticate, (req, res) => {
+router.get('/', (req, res) => {
     citiesControllers.getCities()
         .then(cities => res.json(cities))
         .catch(err => {
