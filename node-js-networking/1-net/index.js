@@ -6,7 +6,7 @@ server.on('connection', (socket) => {
         console.log('message from client: ', data.toString());
     });
 
-    socket.write('hello client!');
+    socket.end('hello client!');
 })
 server.listen(8080, () => {
     console.log(server.address());
