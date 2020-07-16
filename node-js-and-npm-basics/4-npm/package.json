@@ -11,7 +11,7 @@
   "author": "Nikita Rudy",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
