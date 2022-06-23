@@ -14,7 +14,7 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "jsdom": "^14.0.0",
+    "jsdom": "^16.5.0",
     "request": "^2.88.0"
   }
 }
